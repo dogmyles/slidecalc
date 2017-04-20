@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>HDP Scan Time Calculator</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+</head>
+
+<body>
+<div class="container ">
+<div class="row border">
+<div class="col s12 m6 logo-container center"><img class="responsive-img" src="images/hdp_logo.png"></div>
+<div class="col s12 m6 header center black-text"><h2>Throughput<br> Calculator</h2></div>
+    </div>
+    <div class="row ">
+    <div class="col s6 m3 hoverable">
+    Presets: 1x3" full slideholder, 2x3 full slideholder, 5x7 full slideholder <br></div>
+     <div class="col s6 m2 ">
+    scan height (mm): <input type="text" class="resettable hoverable" id="height"/>
+    scan width (mm): <input type="text" class="resettable hoverable" id="width"/></div>
+    <div class="col s12 m2">
+    Scan resolution (microns)
+  <!--  <div class="collection">     </div> class="collection-item" class="collection-item"-->
+        <select type="multiple" id="resolution" class="hoverable">
+            <option ><a href="#!" value="0.5" selected="selected">0.5</a></option>
+            <option ><a href="#!"  value="0.25" selected="selected">0.25</a></option>
+
+        </select></div>
+    
+ 
+<div class="col s12 m5"><b>Optional</b><br>
+<div class="col s4 m2">
+    ROIs per slide: <input type="text" value="1" id="rois" class="resettable hoverable"/></div>
+   <div class="col s4 m2"> Z-Slices per slide: <input type="text" value="1" id="slices" class="resettable hoverable"/></div>
+<div class="col s4 m2">    Total slides: <input type="text" value="1" id="slides" class="resettable "/></div>
+</div>
+    <div class="divider"></div>
+   </div>
+
+   <div class="row ">
+   <div class="col s12 m4">
+    <input type="submit" value="calculate scan time" onclick="computeTime();" class="waves-effect waves-light btn light-blue">
+      <input type="submit" value="Reset" onclick="resetFields();" class="waves-effect waves-light btn grey darken-2"></div>
+      <div class="col s12 m12 l4">
+    <h5 class="black-text left-align">total scan time (minutes): <span id="output" class="resettable"></span> </h5></div>
+
+</div>
+
+</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/scroll.js"></script>
+    <script src="js/select.js"></script>
+        <script src="js/compute.js"></script>
+</body>
+</html>
